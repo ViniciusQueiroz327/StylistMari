@@ -1,7 +1,7 @@
 import { Presentation } from "./components/Presentation/Presentation";
 import { RebeldiaLuxo } from "./components/RebeldiaLuxo/RebeldiaLuxo";
-import { PortfolioCarousel } from "./components/PortfolioCarousel/PortfolioCarousel";
-import { Footer } from "./components/Footer/Footer";
+// import { PortfolioCarousel } from "./components/PortfolioCarousel/PortfolioCarousel";
+// import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -9,10 +9,10 @@ function App() {
       <main>
         <Presentation />
         <RebeldiaLuxo />
-        <PortfolioCarousel />
+        {/* <PortfolioCarousel /> */}
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
