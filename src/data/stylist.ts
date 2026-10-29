@@ -19,9 +19,9 @@ function getAge(birthDate: string): string {
 
 export const stylist = {
   name: "Marília Ribeiro dos Anjos",
-  role: "Estilista em formação",
+  role: "Designer de moda",
   introduction:
-    "A moda é uma forma de expressão, identidade e liberdade. Estou construindo minha trajetória criativa explorando formas, referências e possibilidades para transformar ideias em peças e narrativas visuais.",
+    "Sou interessada em comunicação de moda, styling, editoriais e produção de moda. Busco explorar a relação entre roupa, imagem e contexto, desenvolvendo projetos que unem pesquisa, criatividade e conceito. Estou em busca de experiências que ampliem meu olhar e me permitam crescer profissionalmente na área.",
   photo: "/profile/Mari.jpeg",
   photoAlt: "Foto de perfil",
   details: [

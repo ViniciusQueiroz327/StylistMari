@@ -74,6 +74,21 @@
   border-top: 1px solid var(--color-secondary);
 }
 
+.presentation__detail-link {
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.presentation__detail-link:hover {
+  color: var(--color-accent);
+}
+
+.presentation__detail-link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
 .presentation__detail-label {
   color: var(--color-muted);
   font-size: 0.7rem;

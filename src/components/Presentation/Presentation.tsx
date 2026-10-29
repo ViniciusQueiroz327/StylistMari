@@ -21,20 +21,49 @@ export function Presentation() {
           </p>
 
           <div className="presentation__details">
-            {stylist.details.map((detail) => (
-              <div
-                className="presentation__detail"
-                key={detail.label}
-              >
-                <span className="presentation__detail-label">
-                  {detail.label}
-                </span>
+            {stylist.details.map((detail) => {
+              const value = detail.value.trim();
+              const normalizedLabel = detail.label.toLowerCase();
 
-                <span className="presentation__detail-value">
-                  {detail.value}
-                </span>
-              </div>
-            ))}
+              const isWhatsApp = normalizedLabel.includes("whatsapp");
+              const isEmail = normalizedLabel.includes("e-mail") ||
+                normalizedLabel.includes("email");
+
+              let href: string | null = null;
+
+              if (isWhatsApp) {
+                const phone = value.replace(/\D/g, "");
+                href = `https://wa.me/${phone}`;
+              } else if (isEmail) {
+                href = `mailto:${value}`;
+              }
+
+              return (
+                <div
+                  className="presentation__detail"
+                  key={detail.label}
+                >
+                  <span className="presentation__detail-label">
+                    {detail.label}
+                  </span>
+
+                  {href ? (
+                    <a
+                      className="presentation__detail-value presentation__detail-link"
+                      href={href}
+                      target={isWhatsApp ? "_blank" : undefined}
+                      rel={isWhatsApp ? "noopener noreferrer" : undefined}
+                    >
+                      {detail.value}
+                    </a>
+                  ) : (
+                    <span className="presentation__detail-value">
+                      {detail.value}
+                    </span>
+                  )}
+                </div>
+              );
+            })}
           </div>
 
           <span className="presentation__signature">
